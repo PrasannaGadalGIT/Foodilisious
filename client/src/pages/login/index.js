@@ -40,7 +40,7 @@ const Login = () => {
             <br />
             
             <button type="submit" class="shadow inline-block mr-2 bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-2 rounded">Submit</button>
-            Dont have an account yet ? <Link href="/registerAsUser" class= 'underline decoration-blue-500 text-blue-500' >Sign Up</Link>
+            Dont have an account yet ? <Link href="/register/registerAsUser" class= 'underline decoration-blue-500 text-blue-500' >Sign Up</Link>
           </Form>
         )}
       </Formik>
