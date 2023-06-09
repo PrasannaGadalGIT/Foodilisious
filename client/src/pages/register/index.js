@@ -1,5 +1,6 @@
 import { Formik, Form, Field } from 'formik';
 import Link from 'next/link';
+import { Chip } from '@mui/material';
 
 const Register = ( )=> {
    
@@ -7,11 +8,12 @@ const Register = ( )=> {
         <div>
     
       
-        <Formik
+    <Formik
           initialValues={{
-            phoneNumber: '',
+            resturantName: '',
+            email: '',
             password: '',
-            email: ''
+            
           }}
           onSubmit={values => {
             const requestOptions = {
@@ -25,20 +27,22 @@ const Register = ( )=> {
         >
           {({ errors, touched }) => (
             <Form>
-              <Field name="phoneNumber" placeholder="phoneNumber"/>
-              {errors.phoneNumber && touched.phoneNumber ? (
-                <div>{errors.phoneNumber}</div>
+              <Field name="resturantName" placeholder="resturantName"/>
+              {errors.resturantName && touched.resturantName ? (
+                <div>{errors.resturantName}</div>
               ) : null}
+              <br/>
+              <Field name="email"  placeholder="email"/>
+              {errors.email && touched.email ? <div>{errors.email}</div> : null}
+              
               <br/>
               <Field name="password" placeholder="password"/>
               {errors.password && touched.password? (
                 <div>{errors.password}</div>
               ) : null}
+
               <br/>
-              <Field name="email"  placeholder="email"/>
-              {errors.email && touched.email ? <div>{errors.email}</div> : null}
-              <br/>
-              
+             
               <button type="submit">Submit</button>
               Already User <Link href="/login">Sign in</Link>
             </Form>
