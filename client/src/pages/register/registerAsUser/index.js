@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux';
 const RegisterAsUser = () => {
 
   const z = useSelector(state => state.user)
-  console.log(z)
+  
 
   const SignupSchema = Yup.object().shape({
     firstName: Yup.string().required("required"),
@@ -27,7 +27,7 @@ const RegisterAsUser = () => {
           initialValues={{
             firstName: "",
             lastName: "",
-            
+            role: "",
             email: "",
             password: "",
             confirmPassword: "",
@@ -48,7 +48,7 @@ const RegisterAsUser = () => {
               <Field
                 name="firstName"
                 placeholder="First Name"
-                class="block w-60  p-1  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
+                className="block w-60  p-1  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
               />
               {errors.firstName && touched.firstName ? (
                 <div>{errors.firstName}</div>
@@ -57,23 +57,32 @@ const RegisterAsUser = () => {
               <Field
                 name="lastName"
                 placeholder="Last Name"
-                class="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
+                className="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
               />
               {errors.lastName && touched.lastName ? (
                 <div>{errors.lastName}</div>
+              ) : null}
+              <label>Role : </label>
+              <Field
+                name="role"
+                placeholder="Role"
+                className="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
+              />
+              {errors.role && touched.role ? (
+                <div>{errors.role}</div>
               ) : null}
               <label>Email : </label>
               <Field
                 name="email"
                 placeholder="email"
-                class="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
+                className="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
               />
               {errors.email && touched.email ? <div>{errors.email}</div> : null}
               <label>Password : </label>
               <Field
                 name="password"
                 placeholder="Password"
-                class="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
+                className="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
               />
               {errors.password && touched.password ? (
                 <div>{errors.password}</div>
@@ -83,21 +92,21 @@ const RegisterAsUser = () => {
                 name="confirmPassword"
                 placeholder="Password"
                 type="password"
-                class="block w-60  p-1 text-gray-700 text-sm font-bold mb-2 bg-slate-300"
+                className="block w-60  p-1 text-gray-700 text-sm font-bold mb-2 bg-slate-300"
               />
               {errors.confirmPassword && touched.confirmPassword ? (
                 <div>{errors.confirmPassword}</div>
               ) : null}
               <button
                 type="submit"
-                class="shadow inline-block mr-2 bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-2 rounded"
+                className="shadow inline-block mr-2 bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-2 rounded"
               >
                 Submit
               </button>
               Already User?{" "}
               <Link
                 href="/login"
-                class="underline decoration-blue-500 text-blue-500"
+                className="underline decoration-blue-500 text-blue-500"
               >
                 Sign in
               </Link>
