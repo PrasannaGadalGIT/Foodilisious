@@ -43,69 +43,69 @@ const RegisterAsUser = () => {
           }}
         >
           {({ errors, touched }) => (
-            <Form class="bg-white shadow-md rounded px-10 pt-6 pb-8 mb-4">
-              <label>First Name : </label>
+            <Form class="bg-white shadow-md px-10 pt-6 pb-8 mb-4">
+              
               <Field
                 name="firstName"
                 placeholder="First Name"
-                className="block w-60  p-1  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
+                className="block w-60  p-3 rounded-xl  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
               />
               {errors.firstName && touched.firstName ? (
                 <div>{errors.firstName}</div>
               ) : null}
-              <label>Last Name : </label>
+              
               <Field
                 name="lastName"
                 placeholder="Last Name"
-                className="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
+                className="block w-60  p-3 rounded-xl  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
               />
               {errors.lastName && touched.lastName ? (
                 <div>{errors.lastName}</div>
               ) : null}
-              <label>Role : </label>
+              
               <Field
                 name="role"
                 placeholder="Role"
-                className="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
+                className="block w-60  p-3 rounded-xl  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
               />
               {errors.role && touched.role ? (
                 <div>{errors.role}</div>
               ) : null}
-              <label>Email : </label>
+             
               <Field
                 name="email"
                 placeholder="email"
-                className="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
+                className="block w-60  p-3 rounded-xl  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
               />
               {errors.email && touched.email ? <div>{errors.email}</div> : null}
-              <label>Password : </label>
+              
               <Field
                 name="password"
                 placeholder="Password"
-                className="block p-1 w-60  text-gray-700 text-sm font-bold mb-1 bg-slate-300"
+                className="block w-60  p-3 rounded-xl  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
               />
               {errors.password && touched.password ? (
                 <div>{errors.password}</div>
               ) : null}
-              <label>Confirm Password : </label>
+              
               <Field
                 name="confirmPassword"
                 placeholder="Password"
                 type="password"
-                className="block w-60  p-1 text-gray-700 text-sm font-bold mb-2 bg-slate-300"
+                className="block w-60  p-3 rounded-xl  text-gray-700 text-sm font-bold mb-1 bg-slate-300 "
               />
               {errors.confirmPassword && touched.confirmPassword ? (
                 <div>{errors.confirmPassword}</div>
               ) : null}
               <button
                 type="submit"
-                className="shadow inline-block mr-2 bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-2 rounded"
+                className="shadow inline-block mr-2 bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-2 rounded outline-1"
               >
                 Submit
               </button>
               Already User?{" "}
               <Link
-                href="/login"
+                href="/"
                 className="underline decoration-blue-500 text-blue-500"
               >
                 Sign in
