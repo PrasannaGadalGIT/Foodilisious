@@ -12,9 +12,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function User() {
   const {token, role} = useSelector(state=> state.user)
-  if(token && role == 'User'){
+  if(token && role == 'user'){
     return <Home/>
-}else if(token && role == 'Restaurant Owner'){
+}else if(token && role == 'admin'){
    return <Restaurant/>
 }
 else{

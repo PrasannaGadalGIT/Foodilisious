@@ -28,3 +28,30 @@ body {
     rgb(var(--background-start-rgb));
 }
 */
+.menue{
+  display: flex;
+  justify-content: space-between;
+}
+.searchButoon{
+  
+  background-color: red;
+  padding-right: 11px;
+  border-radius: -4px;
+  color: white;
+  margin-left: 10px;
+  padding-left: 11px;
+  
+}
+
+.searchBox{
+  border-bottom: 1px solid red;
+  width: 260px;
+
+}
+
+
+
+.Products{
+  display: flex;
+  justify-content: space-around;
+}

@@ -7,13 +7,13 @@ app.use(cors())
 const connectDb = require('./dbConnect/connection')
 
 const userRoute=require('./routes/user')
-const restaurantRoute=require('./routes/restaurant')
+const restaurantRoute=require('./routes/food')
+
 
 
 connectDb()
-
-app.use("/", userRoute)
 app.use("/", restaurantRoute)
+app.use("/", userRoute)
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${process.env.PORT}`)
 })
