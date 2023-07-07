@@ -4,13 +4,17 @@ import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
+import { useState } from 'react';
 
 export default function GradientCover(props) {
+
+console.log(props.item)
+
   return (
     <Card sx={{ minHeight: '280px', width: 320 }}>
       <CardCover>
         <img
-          src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src={"http://localhost:3001/restaurantImage/" + props.item._id}
           
           loading="lazy"
           alt=""
@@ -24,13 +28,13 @@ export default function GradientCover(props) {
       />
       <CardContent sx={{ justifyContent: 'flex-end' }}>
         <Typography level="h2" fontSize="lg" textColor="#fff" mb={1}>
-          {props.item.restaurantName}
+          {props.item.RestaurantName}
         </Typography>
         <Typography
           startDecorator={<LocationOnRoundedIcon />}
           textColor="neutral.300"
         >
-          {props.item.restaurantAddress}
+          {props.item.Address}
         </Typography>
       </CardContent>
     </Card>

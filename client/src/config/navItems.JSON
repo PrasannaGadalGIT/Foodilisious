@@ -1,0 +1,18 @@
+{
+    "user":{
+        "navItems": [
+            {"navName":"Home", "link": "/"},
+            {"navName":"About", "link": "/about"},
+            {"navName":"Contact", "link": "/contact"}
+    ]
+    },
+    "admin":{
+        "navItems": [
+            {"navName":"Home", "link": "/"},
+            {"navName":"Menue", "link": "/menue"},
+            {"navName":"Order Request", "link": "/orderRequests"},
+            {"navName":"History", "link": "/history"}
+    ]
+    }
+    }
+    

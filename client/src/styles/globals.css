@@ -30,7 +30,12 @@ body {
 */
 .menue{
   display: flex;
-  justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background: black;
+    opacity: 0.9;
+  
+  margin-bottom: 10px;
 }
 .searchButoon{
   
@@ -49,9 +54,38 @@ body {
 
 }
 
+.menue::before{
+  
+    content: "";
+    background: url(../../../img/foodBackground.jpg) no-repeat no-repeat center/cover;
+    background-color: black;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    display: flex;
+    
+
+}
+
+.content{
+  color: white;
+    position: relative;
+    top: 155px;
+    left: 1064px;
+    text-align: center;
+    width: 412px;
+    height: 117px;
+    font-size: 24px;
+    font-family: cursive;
+}
+
 
 
 .Products{
   display: flex;
-  justify-content: space-around;
+    justify-content: space-around;
+    position: relative;
+    top: 500px;
 }

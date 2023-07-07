@@ -18,6 +18,8 @@ const storage = multer.diskStorage({
 
   
 
-app.post('/restaurantImage', upload.single('foodMenue'),   FoodController.addMenueImage)
-app.get('/restaurantImage', FoodController.getMenueFile)
+app.post('/restaurantImage', upload.single('foodMenue'), FoodController.addMenueImage)
+app.get('/restaurantImage/:id', FoodController.getMenueFile)
+app.get('/getAllMenue', FoodController.getAllMenue)
+
 module.exports = app

@@ -1,0 +1,20 @@
+.navmenu{
+    display: flex;
+    color: white;
+}
+.navItem{
+    margin-right: 100px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.restaurantNavBar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.basicMenue{
+    background-color: white;
+    color: black;
+}

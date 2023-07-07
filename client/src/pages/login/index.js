@@ -70,7 +70,7 @@ const Login = () => {
               </button>
               Dont have an account yet ?{" "}
               <Link
-                href="/register/registerAsUser"
+                href="/register"
                 className="underline decoration-blue-500 text-blue-500"
               >
                 Sign Up
