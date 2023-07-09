@@ -4,7 +4,8 @@ export const initialState = {
   //state where token with empty state
   token : '',
   id : '',
-  role : ''
+  role : '',
+  menue : ''
 };
 
 const UserSlice = createSlice({
@@ -25,10 +26,15 @@ const UserSlice = createSlice({
     resetUser:  (state, actions) => {
       return {...initialState}
    },
-
+   setMenue: (state, actions) => {
+    return {
+      ...state,
+      menue : actions.payload.menue
+    }
+   }
 
   }
   });
 
-export const { setUserDetails, resetUser} = UserSlice.actions;
+export const { setUserDetails, resetUser, setMenue} = UserSlice.actions;
 export default UserSlice.reducer;

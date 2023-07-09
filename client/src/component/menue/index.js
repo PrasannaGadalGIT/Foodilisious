@@ -6,9 +6,11 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { useDispatch } from 'react-redux';
 import {resetUser} from '../../redux/reducer/userSlice'
+import { useRouter } from 'next/router';
 
 
 export default function BasicMenu() {
+  const router = useRouter()
   //dispatch to call the reducer function
   const dispatch = useDispatch()
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -42,7 +44,7 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={() => router.push('/profile')}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={()=>dispatch(resetUser())}>Logout</MenuItem> 
       </Menu>
